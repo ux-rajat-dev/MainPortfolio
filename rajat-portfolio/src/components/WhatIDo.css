@@ -1,0 +1,85 @@
+:root {
+  --orange: #ff5f1f;
+  --white: #ffffff;
+  --text-muted: #cbd5e1;
+  --highlight: #e2e8f0;
+  --background: #1e2a38;
+  --card-bg: #2c3b4d;
+}
+
+.whatIDo-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.whatIDo-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.titleDescriptionWhatIDo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.what-i-do {
+  background-color: var(--background);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.service-icon {
+  color: var(--orange);
+  min-width: 40px;
+  margin-top: 5px;
+}
+
+.service-content h3 {
+  color: var(--orange);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.service-content p {
+  margin: 5px 0;
+  color: var(--highlight);
+}
+
+.service-content .highlight {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.service-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width:480px) {
+  .service-card{
+    
+  }
+  .service-icon{
+    min-width: 1.5rem;
+  }
+}

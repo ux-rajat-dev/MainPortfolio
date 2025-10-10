@@ -1,0 +1,166 @@
+:root {
+  --orange: #ff5f1f;
+  --white: #ffffff;
+  --dark: #0a0a0a;
+  --box-color: #333e4d;
+}
+
+/* ==== About Section ==== */
+.about {
+  margin-top: -14%;
+  margin-bottom: 4%;
+  text-align: center;
+  color: var(--white);
+}
+
+.titleDescriptionAbout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 3rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background-color: var(--box-color);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.about-card-title {
+  color: var(--orange);
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.about-divider {
+  width: 2px;
+  background-color: var(--orange);
+  height: auto;
+  min-height: 100%;
+  border-radius: 3px;
+}
+
+.about-cta-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+
+  min-width: 200px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.btn-outline:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btn-filled {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+}
+
+.btn-filled:hover {
+  background: #e64a00;
+}
+
+.about-intro strong {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .about {
+    margin-top: 14%;
+  }
+  .about-card-title .about-title {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+
+    line-height: 1.6;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-divider {
+    display: none;
+  }
+
+  .about-card {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 2rem;
+  }
+
+  .about-card-title {
+    text-align: center;
+  }
+
+  .about-buttons {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .btn {
+    min-width: 0px;
+    width: 100%;
+  }
+}

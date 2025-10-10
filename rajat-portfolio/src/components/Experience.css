@@ -1,0 +1,261 @@
+:root {
+  --orange: #ff5f1f;
+  --white: #ffffff;
+  --dark: #0a0a0a;
+  --card-bg: #333e4d;
+}
+
+.experience {
+  color: var(--white);
+  margin-bottom: 4%;
+}
+
+.titleDescriptionExperience {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.experience-subtitle {
+  font-size: 1rem;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+/* Timeline layout */
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 35px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--orange);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+/* Timeline marker (dot and duration) */
+.timeline-marker {
+  position: relative;
+  width: 70px; /* Enough space to handle dot alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  position: absolute;
+  left: 35px; /* Match with .timeline-line left */
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--white);
+  border-radius: 50%;
+  z-index: 2; /* Above the timeline line */
+}
+
+.duration-box {
+  background-color: var(--white);
+  color: var(--orange);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Card */
+.experience-card {
+  flex: 1;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 16%;
+  object-fit: contain;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-content h4 {
+  margin: 0.2rem 0;
+  font-weight: normal;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.experience-duration {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.card-menu-web {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.card-menu-web {
+  display: flex;
+}
+
+.card-menu-mob {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .timeline-marker {
+    width: 100%;
+  }
+  .duration-box {
+    width: 100%;
+  }
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+  }
+
+  .timeline-container {
+    margin-left: 0;
+  }
+
+  .timeline-marker {
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .experience-card {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-left img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .card-left {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card-menu-mob {
+    display: flex;
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  .card-menu-web {
+    display: none;
+  }
+
+  .experience {
+    margin-top: 14%;
+  }
+}
+
+.card-menu-web {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 8px 0;
+  width: 160px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.experience-description-wrapper {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #d1d1d1; /* Change this color to fit your theme */
+  line-height: 1.6;
+}
+
+.experience-description-wrapper p {
+  margin: 0 0 10px;
+}
+
+.experience-description-wrapper ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.experience-description-wrapper li {
+  margin-bottom: 6px;
+  list-style-type: disc; /* or circle/square */
+}

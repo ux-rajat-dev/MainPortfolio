@@ -1,0 +1,147 @@
+:root {
+  --orange: #ff5f1f;
+  --white: #ffffff;
+  --dark: #0a0a0a;
+  --box-color: #333e4d;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    margin-top: 14%;
+  }
+}
+
+.portfolio {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 4%;
+}
+
+.titleDescriptionPortfolio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.portfolio-subtitle {
+  font-size: 1rem;
+  max-width: 900px;
+  line-height: 1.6;
+}
+
+/* Tabs */
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-btn.active {
+  color: var(--orange);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 4px;
+}
+
+/* Grid container */
+.portfolio-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+/* Cards */
+.portfolio-card {
+  background-color: var(--box-color);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  gap: 10px;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1.3rem;
+}
+
+.portfolio-card-title {
+  display: block;
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--white);
+}
+
+/* Vertical dividers */
+.portfolio-divider {
+  width: 3px;
+  background-color: var(--orange);
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-divider {
+    display: none;
+  }
+
+  .portfolio-image {
+    height: 160px;
+  }
+}
