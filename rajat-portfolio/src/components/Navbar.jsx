@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className={`nav-wrapper ${menuOpen ? 'open' : ''}`}>
         <ul className="nav-links">
           <li>
-            <a href="#home" onClick={toggleMenu}>
+            <a href="#hero" onClick={toggleMenu}>
               Home
             </a>
           </li>
@@ -35,12 +35,12 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#skills" onClick={toggleMenu}>
-              Skills
+            <a href="#tools" onClick={toggleMenu}>
+              Tools
             </a>
           </li>
           <li>
-            <a href="#portfolio" onClick={toggleMenu}>
+            <a href="#projects" onClick={toggleMenu}>
               Projects
             </a>
           </li>

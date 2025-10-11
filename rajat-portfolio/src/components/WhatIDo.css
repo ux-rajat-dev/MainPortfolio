@@ -50,7 +50,6 @@
 
 .service-icon {
   color: var(--orange);
-  min-width: 40px;
   margin-top: 5px;
 }
 
@@ -75,11 +74,10 @@
   font-size: 1.1rem;
 }
 
-@media (max-width:480px) {
-  .service-card{
-    
+@media (max-width: 480px) {
+  .service-card {
   }
-  .service-icon{
+  .service-icon {
     min-width: 1.5rem;
   }
 }

@@ -3,7 +3,7 @@ import './Hero.css';
 import profileImage from '../assets/main-image.png';
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="div-hero">
         <div className="hero-left">
           <p className="hero-welcome">Hello, Welcome</p>

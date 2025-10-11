@@ -39,7 +39,7 @@ const services = [
 
 const WhatIDo = () => {
   return (
-    <section className="what-i-do">
+    <section className="what-i-do" id="service">
       <div className="titleDescriptionWhatIDo">
         <h2 class="whatIDo-title">What I Do</h2>
         <p class="whatIDo-subtitle">

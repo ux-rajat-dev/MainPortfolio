@@ -4,7 +4,7 @@ import resume from '../assets/Rajat_Burde_Resume.pdf';
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="titleDescriptionAbout">
         <h2 className="about-title">About Me</h2>
         <p className="about-intro">

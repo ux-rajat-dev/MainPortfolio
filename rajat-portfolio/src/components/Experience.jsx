@@ -134,7 +134,7 @@ const Experience = () => {
   };
 
   return (
-    <section className='experience'>
+    <section className='experience' id="experience">
       <div className='titleDescriptionExperience'>
         <h2 className='portfolio-title'>Experience</h2>
         <p className='experience-subtitle'>

@@ -20,7 +20,7 @@ import MySQL from '../assets/ToolsImg/MySQL.png';
 
 const Tools = () => {
   return (
-    <section className="tools">
+    <section className="tools" id="tools">
       <div className="titleDescriptionTools">
         <h2 className="tools-title">Tools</h2>
         <p className="tools-subtitle">
