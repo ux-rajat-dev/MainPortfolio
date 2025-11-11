@@ -26,6 +26,11 @@ import AiPoweredSkillDevelopmentProject from "../assets/Projects/AiPoweredSkillD
 import PackagingDesignForInteriorLightsProject from "../assets/Projects/PackagingDesignForInteriorLightsProject.pdf";
 import AiEnabledSmartTabletProject from "../assets/Projects/AiEnabledSmartTabletProject.pdf";
 
+import LibraryManagementSystem from "../assets/Projects/LibraryManagementSystem.png";
+import Weatherly from "../assets/Projects/Weatherly.png";
+import SmartColorPalleteGenerator from "../assets/Projects/SmartColorPalleteGenerator.png";
+import ColorContrastChecker from "../assets/Projects/ColorContrastChecker.png";
+
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("design");
 
@@ -104,6 +109,33 @@ const Portfolio = () => {
     },
   ];
 
+  const codingProjects = [
+    {
+      id: 1,
+      title: "Library Management System",
+      image: LibraryManagementSystem,
+      link: "https://librarymanagementbyrajat.netlify.app/",
+    },
+    {
+      id: 2,
+      title: "Weatherly - Check Weather App",
+      image: Weatherly,
+      link: "https://weatherlybyrajat.netlify.app/",
+    },
+    {
+      id: 3,
+      title: "Smart Color Palette Generator",
+      image: SmartColorPalleteGenerator,
+      link: "https://smartcolorpalletbyrajat.netlify.app/",
+    },
+    {
+      id: 4,
+      title: "Color Contrast Checker",
+      image: ColorContrastChecker,
+      link: "https://colorcontrastcheckerbyrajat.netlify.app/",
+    },
+  ];
+
   return (
     <section className="portfolio" id="projects">
       <div className="titleDescriptionPortfolio">
@@ -150,10 +182,26 @@ const Portfolio = () => {
           </div>
         </div>
       ) : (
-        <p className="coming-soon">
-          🚧 <strong>Coding projects are on the way.</strong> Stay tuned for
-          some exciting builds!
-        </p>
+        <div className="portfolio-grid-container">
+          <div className="portfolio-grid">
+            {codingProjects.map((project) => (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-card"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="portfolio-image"
+                />
+                <div className="portfolio-card-title">{project.title}</div>
+              </a>
+            ))}
+          </div>
+        </div>
       )}
     </section>
   );
