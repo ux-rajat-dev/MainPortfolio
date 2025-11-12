@@ -30,6 +30,7 @@ import LibraryManagementSystem from "../assets/Projects/LibraryManagementSystem.
 import Weatherly from "../assets/Projects/Weatherly.png";
 import SmartColorPalleteGenerator from "../assets/Projects/SmartColorPalleteGenerator.png";
 import ColorContrastChecker from "../assets/Projects/ColorContrastChecker.png";
+import AiImageCaption from "../assets/Projects/AiImageCaptioner.png";
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("design");
@@ -133,6 +134,12 @@ const Portfolio = () => {
       title: "Color Contrast Checker",
       image: ColorContrastChecker,
       link: "https://colorcontrastcheckerbyrajat.netlify.app/",
+    },
+    {
+      id: 5,
+      title: "AI Image Caption Generator",
+      image: AiImageCaption,
+      link: "https://imagecaptioneraibyrajat.netlify.app/",
     },
   ];
 
